@@ -398,7 +398,7 @@ class PreintegrationEvaluator:
                     continue
 
                 valid_windows += 1
-
+                print()
                 # 计算旋转误差
                 rot_error = np.degrees((imu_delta['delta_R'].inv() * gt_delta['delta_R']).magnitude())
                 all_errors[win_len]['rot'].append(rot_error)
